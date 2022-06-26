@@ -81,15 +81,32 @@ h1{
 .logo{
     margin: auto;
     display: block;
-    height: 50vh;
-    width: 50wh;
-    border: 2px solid black;
+    height:fit-content;
+    width: 30%;
+    border: 6px solid black;
+    border-radius: 300px;
+    transition: 1s;
 }
 .bajoLogo{
     width: fit-content;
     margin: 20px auto;
-    font-size: 200%;
+    font-size: 80px;
 }
+@media only screen and (max-width: 800px){
+    .logo{
+        width: 50%;
+    }
+    .bajoLogo{
+        font-size: 50px;
+    }
+}
+.bajoLogo span{
+    color: cornflowerblue;
+}
+.logo:hover{
+    transform: rotate(1turn);
+}
+
 /* fin estilo logo */
 
 /* carrousel en CSS */
@@ -203,7 +220,6 @@ h1{
     'fotoNacho fotoRey'
     ;
     justify-items: center;
-    align-content: center;
 }
 .escalera{
     grid-area: fotoEsc;
