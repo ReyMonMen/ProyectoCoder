@@ -149,7 +149,7 @@ h1{
 
 /* subrayado de enlaces del footer cuando paso el mouse */
 .footer-enlaces:hover{
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 /* fin subrayado footer */
 
