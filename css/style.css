@@ -1,0 +1,285 @@
+/*fuentes*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+/* colores */
+/* reset de mrgin paddin y estilo de fuente para todo el sitio */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* fin margin paddin */
+/* agragando estilos de fondos y bordes generales */
+body {
+  background-color: antiquewhite !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* fin de estilos generales */
+/* Importando componentes */
+.cabecera {
+  background-color: aquamarine;
+  border: 2px solid black;
+  /* aplicando flexbox a la cabecera */
+}
+.cabecera .menu {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  /* fin de flexbox cabecera */
+  /* estilo de botones del menu */
+}
+.cabecera .menu .boton {
+  padding: 10px 1px;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 20px;
+  background-color: aqua;
+  border: 2px solid black;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 2px;
+  margin: 2px;
+  transition: 0.5s;
+  width: 100px;
+  /* fin estilos de menu */
+  /* cambio de color del boton correspondiente a la ventana activa */
+  /* fin activo header */
+}
+.cabecera .menu .boton:hover {
+  text-decoration: underline;
+  transform: scale(1.2);
+}
+.cabecera .menu .activo {
+  background-color: palegreen;
+}
+
+/* estilos para el logo central del index */
+.logo {
+  margin: auto;
+  display: block;
+  height: fit-content;
+  width: 30%;
+  border: 6px solid black;
+  border-radius: 300px;
+  transition: 1s;
+}
+
+.bajoLogo {
+  width: fit-content;
+  margin: 20px auto;
+  font-size: 80px;
+  font-family: "Signika Negative", sans-serif;
+}
+
+/* Media para hacer mas responsive el logo y el textobajo logo */
+@media only screen and (max-width: 800px) {
+  .logo {
+    width: 50%;
+  }
+  .bajoLogo {
+    font-size: 50px;
+  }
+}
+.bajoLogo span {
+  color: cornflowerblue;
+}
+
+.logo:hover {
+  transform: rotate(1turn);
+}
+
+/* fin estilo logo */
+/* carrousel en CSS + bootstrap */
+.carrousel {
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 15px;
+}
+
+.carrousel p {
+  width: fit-content;
+  margin: auto;
+  font-size: larger;
+}
+
+/* fin carrousel */
+.foot {
+  background-color: aquamarine;
+  border: 2px solid black;
+  margin-top: 20px;
+}
+
+/* aplicando flexbox al footer */
+.pie {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.enlaces {
+  display: flex;
+  align-items: center;
+  margin-left: 3px;
+}
+
+.enlaces a {
+  margin-left: 4px;
+  font-family: "Signika Negative", sans-serif;
+}
+
+/* Media para acomodar el footer para celulares y tablets*/
+@media screen and (max-width: 1050px) {
+  .enlaces {
+    width: 260px;
+  }
+}
+/* fin de flexbox footer */
+/* subrayado de enlaces del footer cuando paso el mouse */
+.footer-enlaces:hover {
+  text-decoration: underline !important;
+}
+
+/* fin subrayado footer */
+/* aplicando grid a las imagenes de pa pagina de trabajos */
+.grid-container {
+  width: 98%;
+  margin: auto;
+  display: grid;
+  grid-auto-rows: 25rem;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 5px;
+  /* border: 3px solid black; */
+}
+
+@media only screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  }
+}
+.grid-item {
+  border: 3px solid black;
+  display: flex;
+}
+
+.grid-item img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* fin grid trabajos */
+/* margin align nosotros */
+.nosotros {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nosotros p {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* fin margin align nosotros */
+/* aplicando grid template areas en las imagenes de la solapa nosotros */
+.fotosNosotros {
+  width: 80%;
+  display: grid;
+  gap: 10px;
+  margin: auto;
+  grid-template-areas: "fotoEsc fotoEsc" "fotoEsc fotoEsc" "fotoNacho fotoRey" "fotoNacho fotoRey";
+  justify-items: center;
+}
+
+.escalera {
+  grid-area: fotoEsc;
+  /* display: flex; */
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 2px;
+  align-content: center;
+}
+
+.escalera img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+  /* align-content: center; */
+}
+
+.nacho {
+  /* display: flex; */
+  grid-area: fotoNacho;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 2px;
+}
+
+.nacho img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+}
+
+.rey {
+  /* display: flex; */
+  grid-area: fotoRey;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 2px;
+}
+
+.rey img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+}
+
+/* fin grid nosotros */
+/* grid system de bootstrap */
+.col img {
+  width: 100%;
+}
+
+.sectionServicios p {
+  font-size: 30px;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.sectionServicios ul {
+  font-size: 25px;
+  width: fit-content;
+  margin-left: 12%;
+}
+
+/* fin estilos prod y servicios */
+/* estilo titulo de pagina */
+h1 {
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 300%;
+  font-family: "Signika Negative", sans-serif;
+}
+
+/* fin estilo titulo */
+
+/*# sourceMappingURL=style.css.map */

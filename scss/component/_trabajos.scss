@@ -1,0 +1,26 @@
+/* aplicando grid a las imagenes de pa pagina de trabajos */
+.grid-container{
+    width: 98%;
+    margin: auto;
+    display: grid;
+    grid-auto-rows: 25rem;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 5px;
+    /* border: 3px solid black; */
+}
+@media only screen and (max-width: 480px){
+    .grid-container{
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    }
+} 
+
+.grid-item{ 
+    border: 3px solid black;
+    display: flex;
+}
+.grid-item img{
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+/* fin grid trabajos */

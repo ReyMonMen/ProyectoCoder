@@ -1,0 +1,49 @@
+/* estilos para el logo central del index */
+.logo {
+    margin: auto;
+    display: block;
+    height: fit-content;
+    width: 30%;
+    border: 6px solid black;
+    border-radius: 300px;
+    transition: 1s;
+  }
+  
+  .bajoLogo {
+    width: fit-content;
+    margin: 20px auto;
+    font-size: 80px;
+    font-family: $main-font;
+  }
+  /* Media para hacer mas responsive el logo y el textobajo logo */
+  @media only screen and (max-width: 800px) {
+    .logo {
+      width: 50%;
+    }
+    .bajoLogo {
+      font-size: 50px;
+    }
+  }
+  .bajoLogo span {
+    color: cornflowerblue;
+  }
+  
+  .logo:hover {
+    transform: rotate(1turn);
+  }
+  
+  /* fin estilo logo */
+  /* carrousel en CSS + bootstrap */
+  .carrousel {
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 15px;
+  }
+  
+  .carrousel p {
+    width: fit-content;
+    margin: auto;
+    font-size: larger;
+  }
+  
+  /* fin carrousel */
