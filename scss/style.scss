@@ -1,10 +1,19 @@
-@import 'variables';
 /* reset de mrgin paddin y estilo de fuente para todo el sitio */
 *{
     margin: 0;
     padding: 0;
 }
 /* fin margin paddin */
+
+/* Importando componentes */
+@import 'variables';
+@import 'component/header';
+@import 'component/index';
+@import 'component/footer';
+@import 'component/trabajos';
+@import 'component/nosotros';
+@import 'component/servicios';
+
 
 /* agragando estilos de fondos y bordes generales */
 body{
@@ -18,18 +27,6 @@ ul{
     list-style-type: none;
 }
 /* fin de estilos generales */
-
-/* Importando componentes */
-
-@import 'component/header';
-@import 'component/index';
-@import 'component/footer';
-@import 'component/trabajos';
-@import 'component/nosotros';
-@import 'component/servicios';
-
-
-
 
 
 /* estilo titulo de pagina */

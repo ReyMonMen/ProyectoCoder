@@ -1,29 +1,14 @@
-/*fuentes*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
-/* colores */
 /* reset de mrgin paddin y estilo de fuente para todo el sitio */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
 /* fin margin paddin */
-/* agragando estilos de fondos y bordes generales */
-body {
-  background-color: antiquewhite !important;
-}
-
-a {
-  text-decoration: none !important;
-  color: black !important;
-}
-
-ul {
-  list-style-type: none;
-}
-
-/* fin de estilos generales */
 /* Importando componentes */
+/*fuentes*/
+/* colores */
 .cabecera {
   background-color: aquamarine;
   border: 2px solid black;
@@ -272,6 +257,21 @@ ul {
 }
 
 /* fin estilos prod y servicios */
+/* agragando estilos de fondos y bordes generales */
+body {
+  background-color: antiquewhite !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* fin de estilos generales */
 /* estilo titulo de pagina */
 h1 {
   margin-top: 2%;
