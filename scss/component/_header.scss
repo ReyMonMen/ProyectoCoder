@@ -1,7 +1,8 @@
 .cabecera {
-    background-color: $header-color;
-    border: $borders;
-    /* aplicando flexbox a la cabecera */
+    background-color: map-get($palette, header-color);
+    border-bottom: $borders;
+    border-top: $borders;
+    
     .menu {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -10,32 +11,18 @@
         justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
-        /* fin de flexbox cabecera */
-          /* estilo de botones del menu */
+        
         .boton {
-            padding: 10px 1px;
-            font-family: $main-font;
-            font-size: 20px;
-            background-color: $button-color;
-            border: $borders;
-            border-radius: 6px;
-            text-align: center;
-            margin-top: 2px;
-            margin: 2px;
-            transition: 0.5s;
-            width: 100px;
-        /* fin estilos de menu */
-
+            @extend %botones;
+        
             &:hover {
                 text-decoration: underline;
-                transform: scale(1.2);
+                @include magic(scale(1.2));
             }
-              /* cambio de color del boton correspondiente a la ventana activa */
-            
-            /* fin activo header */
-            }
+        }
+        /*cambio de color a la pagina activa*/
         .activo {
-            background-color: $active-color;
+            background-color: map-get($palette, activa);   
         }
     }
 

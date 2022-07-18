@@ -7,6 +7,9 @@
 
 /* Importando componentes */
 @import 'variables';
+@import 'component/maps';
+@import 'component/extends';
+@import 'component/mixins';
 @import 'component/header';
 @import 'component/index';
 @import 'component/footer';
@@ -14,26 +17,39 @@
 @import 'component/nosotros';
 @import 'component/servicios';
 
-
+html {
+    min-height: 100%;
+    position: relative;
+}
 /* agragando estilos de fondos y bordes generales */
 body{
-    background-color: $bg_color !important;
+    background-color: map-get($palette, bg-color) !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 a{
     text-decoration: $link-decoration !important;
-    color: $link-color !important;
+    color: map-get($palette, link-color) !important;
 }
 ul{
     list-style-type: none;
 }
-/* fin de estilos generales */
+/* fin de estilos generales */  
 
 
 /* estilo titulo de pagina */
-h1{
+.titulo{
     margin-top: 2%;
     margin-left: 2%;
     font-size: 300%;
     font-family: $main-font;
+    margin-bottom: 2%;
+}
+.h1Seo{
+    font-size: 30px;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 30px;
 }
 /* fin estilo titulo */

@@ -1,7 +1,9 @@
 .foot {
-    background-color: $footer-color;
-    border: $borders;
-    margin-top: 20px;
+    background-color: map-get($palette, footer-color);
+    border-top: $borders;
+    border-bottom: $borders;
+    margin-top: auto;
+    margin-top: 2%;
 }
 
 /* aplicando flexbox al footer */
@@ -29,7 +31,7 @@
 /* Media para acomodar el footer para celulares y tablets*/
   @media screen and (max-width: 1050px) {
     .enlaces {
-      width: 260px;
+      width: 300px;
     }
   }
   /* fin de flexbox footer */
