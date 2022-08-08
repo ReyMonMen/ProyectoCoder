@@ -1,0 +1,299 @@
+/* reset de mrgin paddin y estilo de fuente para todo el sitio */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* fin margin paddin */
+/* Importando componentes */
+/*fuentes*/
+.cabecera .menu .boton {
+  padding: 10px 1px;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 20px;
+  background-color: #36d278;
+  border: 2px solid black;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 2px;
+  margin: 2px;
+  transition: 0.1s;
+  width: 100px;
+}
+
+.cabecera {
+  background-color: #53d3d6;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+.cabecera .menu {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  /*cambio de color a la pagina activa*/
+}
+.cabecera .menu .boton:hover {
+  text-decoration: underline;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.cabecera .menu .activo {
+  background-color: rgba(105, 226, 12, 0.8823529412);
+}
+
+/* estilos para el logo central del index */
+.logo {
+  margin: auto;
+  display: block;
+  width: 30%;
+  transition: 0.5s;
+}
+
+.bajoLogo {
+  width: fit-content;
+  margin: 20px auto;
+  font-size: 80px;
+  font-family: "Signika Negative", sans-serif;
+}
+
+/* Media para hacer mas responsive el logo y el textobajo logo */
+@media only screen and (max-width: 800px) {
+  .logo {
+    width: 50%;
+  }
+  .bajoLogo {
+    font-size: 50px;
+  }
+}
+.bajoLogo span {
+  color: cornflowerblue;
+}
+
+.logo:hover {
+  transform: rotate(2turn);
+}
+
+/* fin estilo logo */
+/* carrousel en CSS + bootstrap */
+.carrousel {
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 15px;
+}
+
+.carrousel p {
+  width: fit-content;
+  margin: auto;
+  font-size: larger;
+  font-family: "Signika Negative", sans-serif;
+}
+
+/* fin carrousel */
+.foot {
+  background-color: #53d3d6;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin-top: auto;
+  margin-top: 2%;
+}
+
+/* aplicando flexbox al footer */
+.pie {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.enlaces {
+  display: flex;
+  align-items: center;
+  margin-left: 3px;
+}
+
+.enlaces a {
+  margin-left: 4px;
+  font-family: "Signika Negative", sans-serif;
+}
+
+/* Media para acomodar el footer para celulares y tablets*/
+@media screen and (max-width: 1050px) {
+  .enlaces {
+    width: 300px;
+  }
+}
+/* fin de flexbox footer */
+/* subrayado de enlaces del footer cuando paso el mouse */
+.footer-enlaces:hover {
+  text-decoration: underline !important;
+}
+
+/* fin subrayado footer */
+/* aplicando grid a las imagenes de pa pagina de trabajos */
+.grid-container {
+  width: 98%;
+  margin: auto;
+  display: grid;
+  grid-auto-rows: 25rem;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 5px;
+}
+
+@media only screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  }
+}
+.grid-item {
+  border: 3px solid black;
+  display: flex;
+}
+
+.grid-item img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* fin grid trabajos */
+/* margin align nosotros */
+.nosotros {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nosotros p {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* fin margin align nosotros */
+/* aplicando grid template areas en las imagenes de la solapa nosotros */
+.fotosNosotros {
+  width: 80%;
+  display: grid;
+  gap: 10px;
+  margin: auto;
+  grid-template-areas: "fotoEsc fotoEsc" "fotoEsc fotoEsc" "fotoNacho fotoRey" "fotoNacho fotoRey";
+  justify-items: center;
+}
+
+.escalera {
+  grid-area: fotoEsc;
+  /* display: flex; */
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 2px;
+  align-content: center;
+}
+
+.escalera img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+  /* align-content: center; */
+}
+
+.nacho {
+  /* display: flex; */
+  grid-area: fotoNacho;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 2px;
+}
+
+.nacho img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+}
+
+.rey {
+  /* display: flex; */
+  grid-area: fotoRey;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 2px;
+}
+
+.rey img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+}
+
+/* fin grid nosotros */
+/* grid system de bootstrap */
+.col img {
+  width: 100%;
+}
+
+.sectionServicios p {
+  font-size: 30px;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.sectionServicios ul {
+  font-size: 25px;
+  width: fit-content;
+  margin-left: 12%;
+}
+
+/* fin estilos prod y servicios */
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+/* agragando estilos de fondos y bordes generales */
+body {
+  background-color: rgb(214, 222, 234) !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* fin de estilos generales */
+/* estilo titulo de pagina */
+.titulo {
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 300%;
+  font-family: "Signika Negative", sans-serif;
+  margin-bottom: 2%;
+}
+
+.h1Seo {
+  font-size: 30px;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+/* fin estilo titulo */
+
+/*# sourceMappingURL=style.css.map */

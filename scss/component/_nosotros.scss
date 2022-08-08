@@ -1,0 +1,67 @@
+/* margin align nosotros */
+.nosotros{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.nosotros p{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+/* fin margin align nosotros */
+
+/* aplicando grid template areas en las imagenes de la solapa nosotros */
+.fotosNosotros{
+    width: 80%;
+    display: grid;
+    gap: 10px;
+    margin: auto;
+
+    grid-template-areas:
+    'fotoEsc fotoEsc'
+    'fotoEsc fotoEsc'
+    'fotoNacho fotoRey'
+    'fotoNacho fotoRey'
+    ;
+    justify-items: center;
+}
+.escalera{
+    grid-area: fotoEsc;
+    /* display: flex; */
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 2px;
+    align-content: center;
+}
+.escalera img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    /* align-content: center; */
+}
+.nacho{
+    /* display: flex; */
+    grid-area: fotoNacho;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 2px;
+}
+.nacho img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+}
+.rey{
+    /* display: flex; */
+    grid-area: fotoRey;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 2px;
+}
+.rey img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+}
+/* fin grid nosotros */

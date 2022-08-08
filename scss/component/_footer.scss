@@ -1,0 +1,43 @@
+.foot {
+    background-color: map-get($palette, footer-color);
+    border-top: $borders;
+    border-bottom: $borders;
+    margin-top: auto;
+    margin-top: 2%;
+}
+
+/* aplicando flexbox al footer */
+.pie {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .enlaces {
+    display: flex;
+    align-items: center;
+    margin-left: 3px;
+  }
+  
+  .enlaces a {
+    margin-left: 4px;
+    font-family: $main-font;
+  }
+/* Media para acomodar el footer para celulares y tablets*/
+  @media screen and (max-width: 1050px) {
+    .enlaces {
+      width: 300px;
+    }
+  }
+  /* fin de flexbox footer */
+  /* subrayado de enlaces del footer cuando paso el mouse */
+  .footer-enlaces:hover {
+    text-decoration: underline !important;
+  }
+  
+  /* fin subrayado footer */

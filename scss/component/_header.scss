@@ -1,0 +1,33 @@
+.cabecera {
+    background-color: map-get($palette, header-color);
+    border-bottom: $borders;
+    border-top: $borders;
+    
+    .menu {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        
+        .boton {
+            @extend %botones;
+        
+            &:hover {
+                text-decoration: underline;
+                @include magic(scale(1.2));
+            }
+        }
+        /*cambio de color a la pagina activa*/
+        .activo {
+            background-color: map-get($palette, activa);   
+        }
+    }
+
+}
+
+
+
+ 
